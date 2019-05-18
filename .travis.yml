@@ -6,4 +6,4 @@ before_install:
   - docker build -t grantwilliams/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run grantwilliams/docker-react npm run test -- --coverage
+  - docker run -e CI=true grantwilliams/docker-react npm run test
